@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sabres Graphs</title>
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css" />-->
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'hockeyGraphs/style.css' %}">
+</head>
+
+<body>
+    <section class="hero is-primary">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">
+                    Sabres Graphs
+                </h1>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-offset-4 is-4">
+                    <form method="POST">
+                        {% csrf_token %}
+                        <div class="field has-addons">
+                            <div class="control is-expanded">
+                                {{ form.fullName}}
+                            </div>
+                            <div class="control">
+                                <button type="submit" class="button is-info">
+                                    Add Player
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-offset-4 is-4">
+                    {% for searchedPlayer in searchedPlayersList %}
+                    <div class="box">
+                        <article class="media mobile-flex">
+                            <div class="media-left">
+                                <figure class = "mobile-flex">
+                                    <img src= 'https://nhl.bamcontent.com/images/headshots/current/168x168/{{ searchedPlayer.id }}.jpg' alt="Image">
+                                </figure>
+                            </div>
+                            <div>
+                                <div>
+                                    <p>
+                                        <span class="title">{{ searchedPlayer.fullName }}</span>
+                                        <br>
+                                        <span class="subtitle">{{ searchedPlayer.position }} - Buffalo Sabres</span>
+                                        <br> 
+                                        Points: {{ searchedPlayer.points }}
+                                        <br>
+                                        Goals: {{ searchedPlayer.goals }}
+                                        <br> 
+                                        Assists: {{ searchedPlayer.assists }}
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    </footer>
+</body>
+
+</html>

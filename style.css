@@ -1,0 +1,178 @@
+body{
+    margin: 0;
+}
+
+#nav{
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    box-shadow: 0px 1px 3px #afaeae;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+}
+
+#nav a{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    color: #133955;
+    text-decoration: none;
+    padding: 0 15px;
+}
+
+#nav a:visited{
+    color: #133955;
+}
+
+#nav a:hover{
+    color: #FB4D42;
+}
+
+#signature{
+    font-family: 'Yellowtail', cursive;
+    font-size: 40px;
+    color: #133955;
+}
+
+#styleBlocks{
+    height: 100%;
+    display: flex;
+}
+
+#block{
+    width: 50px;
+    background-color: #FB4D42;
+}
+
+#block2{
+    width: 50px;
+    background-color: #288BE4;
+}
+
+#block3{
+    width: 50px;
+    background-color: #133955;
+}
+
+#mobileLinks{
+    display: none;
+}
+
+#wrapper{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 0 30px 0;
+}
+
+#wrapper div{
+    padding-left: 10px;
+}
+
+h1{
+    font-family:'Montserrat', sans-serif;
+    font-size: 40px;
+    color: #133955;
+    margin-bottom: 0;
+    padding-left: 20px;
+}
+
+p{
+    font-family: "taviraj", serif;
+    font-weight: 100;
+    line-height: 22px;
+    margin: 0;
+    padding: 0 30px 15px 25px
+}
+
+#foot{
+    width: 100%;
+    height: 75px;
+    background-color: #133955;
+    margin-top: 15px;
+}
+
+/* Contact Form Styles */
+.wpcf7{
+    color: #133955;
+}
+
+.wpcf7 .screen-reader-response{
+    color: #288BE4;
+    margin-left: 20px;
+    padding: 5px;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.wpcf7 .wpcf7-response-output.wpcf7-mail-sent-ok, .wpcf7 .wpcf7-response-output.wpcf7-validation-errors, .wpcf7 .screen-reader-response li, .wpcf7 .wpcf7-response-output.wpcf7-spam-blocked{
+    display: none;
+}
+
+.wpcf7 span{
+    color: #FB4D42;
+}
+
+.wpcf7-submit{
+    color: white;
+    background-color: #133955;
+    border: none;
+    padding: 10px;
+} 
+/* End Contact Form Styles */
+
+@media (max-width: 852px){
+    #links{
+        display: none;
+    }
+    
+    #nav{
+        height: 35px;
+        justify-content: center;
+    }
+    
+    #signature{
+        font-size: 30px;
+    }
+    
+    #styleBlocks{
+        display: none;
+    }
+   
+    #mobileLinks{
+        width: 100%;
+        position: fixed;
+        top: 35px;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        padding: 3px;
+    }
+    
+    #mobileLinks a{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+        color: #133955;
+        text-decoration: none;
+        padding: 0 15px;
+    }
+    
+    #mobileLinks a:hover{
+        color: #288BE4;
+    }
+    
+    #styleBar{
+        height: 15px;
+        width: 100%;
+        position: fixed;
+        top: 48px;
+        background-color: #FB4D42;
+        box-shadow: 0px 1px 3px #afaeae;
+    }
+    
+    #foot{
+        height: 55px;
+    }
+}
